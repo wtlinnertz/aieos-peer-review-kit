@@ -15,7 +15,7 @@ docs/
   artifacts/           # Templates
   prompts/             # AI generation prompts
   validators/          # Quality gate definitions
-  tools/               # 9 review lens tools (four-file sets)
+  tools/               # 10 review lens tools (four-file sets)
   playbook.md          # End-to-end process definition
   index.md             # Documentation entry point
   how-to-adapt.md      # Organizational adoption guidance
@@ -39,7 +39,7 @@ This kit produces one governed artifact type:
 
 The PRR has exactly four governing files: spec, template, prompt, validator.
 
-## Review Lens Tools (9 tools in docs/tools/)
+## Review Lens Tools (10 tools in docs/tools/)
 
 Each lens is a governed tool with four files (spec, template, prompt, validator):
 
@@ -52,18 +52,19 @@ Each lens is a governed tool with four files (spec, template, prompt, validator)
 7. **review-compliance** — Regulatory controls, audit requirements, data sovereignty
 8. **review-devex** — Developer workflow friction, API ergonomics, documentation gaps
 9. **review-business-value** — ROI, scope alignment, feasibility, user value
+10. **review-accessibility** — Perceivability, operability, understandability, robustness, inclusive design (WCAG 2.1 AA baseline)
 
 ## Review Points (Trigger Mapping)
 
 | Review Point | Kit | Artifact Reviewed | Required Lenses | Optional Lenses |
 |---|---|---|---|---|
 | Concept Review | PIK | DPRD | business-value, cost, compliance | security, reliability |
-| Architecture Review | EEK | SAD | security, reliability, performance, cost, operability, maintainability | compliance, devex |
-| Technical Design Review | EEK | TDD | security, reliability, performance, maintainability, devex | cost, compliance |
+| Architecture Review | EEK | SAD | security, reliability, performance, cost, operability, maintainability | compliance, devex, accessibility |
+| Technical Design Review | EEK | TDD | security, reliability, performance, maintainability, devex | cost, compliance, accessibility |
 | Implementation Readiness | EEK | WDD | cost, operability, business-value | maintainability |
-| Code Review | EEK | ORD | security, performance, reliability, maintainability, devex | operability |
+| Code Review | EEK | ORD | security, performance, reliability, maintainability, devex | operability, accessibility |
 | Integration Review | QAK | QGR | reliability, security, performance | operability |
-| Operational Readiness | REK | RP | operability, reliability, security, cost | compliance |
+| Operational Readiness | REK | RP | operability, reliability, security, cost | compliance, accessibility |
 | Post-Deployment Review | RRK | RHR | reliability, performance, cost, operability | security |
 | Incident Review | ODK | PMR | security, reliability, operability | performance, maintainability |
 
