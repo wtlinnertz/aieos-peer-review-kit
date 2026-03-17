@@ -1,12 +1,12 @@
 # Review Operability Lens — Specification
 
-Version: v1.0
+Version: v1.1
 
 Tool ID: TOOL-REVIEW-OPERABILITY
 
 ## Purpose
 
-Examines an artifact through an operability perspective, identifying missing logging, absent metrics, inadequate alerting, missing runbooks, complex deployments, no rollback plan, and insufficient health checks.
+Examines an artifact through an operability perspective, identifying missing operational testing, absent change management readiness, missing runbooks, complex deployments, no rollback plan, and insufficient health checks.
 
 ## Preconditions
 
@@ -27,26 +27,6 @@ Examines an artifact through an operability perspective, identifying missing log
 The tool produces structured output conforming to `review-operability-template.md`.
 
 ## What to Evaluate
-
-### Observability — Logging
-- Is structured logging defined for key operations?
-- Are log levels appropriate (not all INFO, not excessive DEBUG in production)?
-- Are correlation IDs propagated across service boundaries?
-- Are sensitive data redacted from logs?
-- Is log retention and rotation defined?
-
-### Observability — Metrics
-- Are key business and technical metrics identified?
-- Are latency, error rate, and throughput (RED/USE) metrics defined?
-- Are custom metrics defined for domain-specific health indicators?
-- Is metric granularity appropriate (not too coarse, not too fine)?
-
-### Observability — Alerting
-- Are alerts defined for SLO-relevant conditions?
-- Are alert thresholds specific (not "alert on any error")?
-- Is alert routing defined (who gets paged, escalation path)?
-- Are alerts actionable (linked to runbooks or playbooks)?
-- Is there alert fatigue risk (too many non-actionable alerts)?
 
 ### Deployment Complexity
 - Is the deployment process documented step-by-step?
@@ -75,17 +55,30 @@ The tool produces structured output conforming to `review-operability-template.m
 - Is the communication plan defined for incidents?
 - Are post-incident review procedures referenced?
 
+### Operational Testing
+- Is deployment dry-run capability defined?
+- Is rollback verification testing documented?
+- Is configuration change testing addressed?
+- Is environment promotion testing defined?
+- Is operational procedure validation included?
+
+### Change Management Readiness
+- Is a change approval workflow defined?
+- Are change window constraints documented?
+- Is a change communication plan for operational staff included?
+- Are change rollback criteria distinct from release rollback?
+- Are change audit trail requirements defined?
+
 ## Applicable Review Points
 
 | Review Point | Relevance |
 |---|---|
-| Architecture Review | Required — evaluate operational architecture |
 | Implementation Readiness | Required — evaluate operational readiness of work plan |
 | Code Review | Optional — evaluate operational concerns in implementation |
-| Integration Review | Optional — evaluate operational testing |
+| Integration Review | Optional — evaluate operational readiness |
 | Operational Readiness | Required — evaluate deployment operational readiness |
-| Post-Deployment Review | Required — evaluate operational health |
-| Incident Review | Required — evaluate operational response |
+| Post-Deployment Review | Optional — evaluate operational health |
+| Incident Review | Optional — evaluate operational response |
 
 ## Constraints
 

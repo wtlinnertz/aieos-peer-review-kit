@@ -40,14 +40,14 @@ PRK operates at defined review points across the AIEOS pipeline. The trigger is:
 | Review Point | Kit | Artifact Reviewed | Required Lenses | Optional Lenses |
 |---|---|---|---|---|
 | Concept Review | PIK | DPRD | business-value, cost, compliance | security, reliability |
-| Architecture Review | EEK | SAD | security, reliability, performance, cost, operability, maintainability | compliance, devex, accessibility |
-| Technical Design Review | EEK | TDD | security, reliability, performance, maintainability, devex | cost, compliance, accessibility |
+| Architecture Review | EEK | SAD | security, reliability, resilience, performance, cost, operability, maintainability | compliance, devex, accessibility, observability |
+| Technical Design Review | EEK | TDD | security, reliability, performance, maintainability, devex | cost, compliance, accessibility, observability, resilience |
 | Implementation Readiness | EEK | WDD | cost, operability, business-value | maintainability |
-| Code Review | EEK | ORD | security, performance, reliability, maintainability, devex | operability, accessibility |
-| Integration Review | QAK | QGR | reliability, security, performance | operability |
-| Operational Readiness | REK | RP | operability, reliability, security, cost | compliance, accessibility |
-| Post-Deployment Review | RRK | RHR | reliability, performance, cost, operability | security |
-| Incident Review | ODK | PMR | security, reliability, operability | performance, maintainability |
+| Code Review | EEK | ORD | security, performance, reliability, maintainability, devex | operability, accessibility, observability |
+| Integration Review | QAK | QGR | reliability, security, performance | operability, resilience |
+| Operational Readiness | REK | RP | operability, observability, reliability, security, cost | compliance, accessibility, resilience |
+| Post-Deployment Review | RRK | RHR | reliability, observability, performance, cost, operability | security, resilience |
+| Incident Review | ODK | PMR | security, reliability, resilience, operability | performance, maintainability, observability |
 
 ### Context Documents by Review Point
 

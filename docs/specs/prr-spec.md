@@ -1,6 +1,6 @@
 # Peer Review Record — Specification
 
-Version: v1.0
+Version: v1.1
 
 The Peer Review Record (PRR) is the governed artifact of the Peer Review Kit. It aggregates the outputs of all review lenses executed against a specific artifact at a specific review point, surfaces conflicts between lenses, and declares a PASS/FAIL disposition that gates artifact freeze.
 
@@ -171,14 +171,14 @@ This table defines which lenses are required at each review point. It is the aut
 | Review Point | Kit | Artifact Reviewed | Required Lenses | Optional Lenses |
 |---|---|---|---|---|
 | Concept Review | PIK | DPRD | business-value, cost, compliance | security, reliability |
-| Architecture Review | EEK | SAD | security, reliability, performance, cost, operability, maintainability | compliance, devex |
-| Technical Design Review | EEK | TDD | security, reliability, performance, maintainability, devex | cost, compliance |
+| Architecture Review | EEK | SAD | security, reliability, resilience, performance, cost, operability, maintainability | compliance, devex, accessibility, observability |
+| Technical Design Review | EEK | TDD | security, reliability, performance, maintainability, devex | cost, compliance, accessibility, observability, resilience |
 | Implementation Readiness | EEK | WDD | cost, operability, business-value | maintainability |
-| Code Review | EEK | ORD | security, performance, reliability, maintainability, devex | operability |
-| Integration Review | QAK | QGR | reliability, security, performance | operability |
-| Operational Readiness | REK | RP | operability, reliability, security, cost | compliance |
-| Post-Deployment Review | RRK | RHR | reliability, performance, cost, operability | security |
-| Incident Review | ODK | PMR | security, reliability, operability | performance, maintainability |
+| Code Review | EEK | ORD | security, performance, reliability, maintainability, devex | operability, accessibility, observability |
+| Integration Review | QAK | QGR | reliability, security, performance | operability, resilience |
+| Operational Readiness | REK | RP | operability, observability, reliability, security, cost | compliance, accessibility, resilience |
+| Post-Deployment Review | RRK | RHR | reliability, observability, performance, cost, operability | security, resilience |
+| Incident Review | ODK | PMR | security, reliability, resilience, operability | performance, maintainability, observability |
 
 ---
 

@@ -15,22 +15,21 @@ You are an operability reviewer. Examine the artifact through an operability per
 1. Read the artifact under review in full.
 2. Read any context documents provided (SLO definitions, runbooks, monitoring config).
 3. Evaluate the artifact against each category in the spec's "What to Evaluate" section:
-   - Observability — Logging
-   - Observability — Metrics
-   - Observability — Alerting
    - Deployment Complexity
    - Rollback Plan
    - Runbook Coverage
    - On-Call and Incident Response
+   - Operational Testing
+   - Change Management Readiness
 4. For each issue found, create a finding with: severity, title, location in the artifact, description, and recommendation.
 5. Produce output conforming to `review-operability-template.md`.
 
 ## Severity Guidelines
 
-- **Critical** — Operational blindness or unrecoverable deployment: no logging or metrics defined for a production service, deployment with no rollback plan and destructive migration, no alerting for SLO-critical paths
-- **High** — Significant operability gap requiring remediation: no correlation IDs across services, alerts not linked to runbooks, manual deployment steps with no documentation, no on-call defined for a user-facing service
-- **Medium** — Operability weakness that should be addressed: log levels not differentiated, metric granularity too coarse, runbooks exist but not linked to alerts, deployment dependencies not documented
-- **Low** — Minor operability improvement: log rotation policy not explicit, alert thresholds could be tuned, runbook review cadence not defined
+- **Critical** — Unrecoverable deployment or untested operations: deployment with no rollback plan and destructive migration, no operational testing for production-impacting changes, no change management workflow for regulated environment
+- **High** — Significant operability gap requiring remediation: manual deployment steps with no documentation, no on-call defined for a user-facing service, no rollback verification testing, change approval workflow missing for critical services
+- **Medium** — Operability weakness that should be addressed: runbooks exist but incomplete, deployment dependencies not documented, operational procedure validation not defined, change communication plan absent
+- **Low** — Minor operability improvement: runbook review cadence not defined, environment promotion testing not explicit, change audit trail requirements not documented
 
 ## What NOT to Do
 

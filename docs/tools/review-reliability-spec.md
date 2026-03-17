@@ -1,12 +1,12 @@
 # Review Reliability Lens — Specification
 
-Version: v1.0
+Version: v1.1
 
 Tool ID: TOOL-REVIEW-RELIABILITY
 
 ## Purpose
 
-Examines an artifact through a reliability perspective, identifying single points of failure, missing retry logic, absent timeout handling, lack of circuit breakers, missing health checks, no graceful degradation, and missing backup strategies.
+Examines an artifact through a reliability perspective, identifying single points of failure, missing retry logic, absent timeout handling, lack of circuit breakers, missing health checks, and missing backup strategies. The reliability lens focuses on correct behavior under normal and single-failure conditions.
 
 ## Preconditions
 
@@ -53,23 +53,17 @@ The tool produces structured output conforming to `review-reliability-template.m
 - Are health check intervals and thresholds appropriate?
 - Is there a distinction between health check failure modes (degraded vs. down)?
 
-### Graceful Degradation
-- Is there a defined behavior for partial outages?
-- Can the system continue with reduced functionality when dependencies fail?
-- Are degradation modes documented and tested?
-- Is there a recovery path from degraded state?
-
 ### Backup and Recovery
 - Is there a backup strategy for persistent data?
 - Is recovery time objective (RTO) defined?
 - Is recovery point objective (RPO) defined?
 - Is the backup strategy tested?
 
-### Failure Mode Analysis
+### Failure Mode Identification
 - Are known failure modes documented?
-- Is the blast radius of each failure mode bounded?
-- Are cascading failure scenarios identified?
 - Are failure detection mechanisms defined?
+- Is the expected behavior for each identified failure mode documented?
+- Are failure mode severity classifications assigned?
 
 ## Applicable Review Points
 
