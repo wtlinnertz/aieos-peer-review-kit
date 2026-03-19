@@ -40,12 +40,14 @@ PRK operates at defined review points across the AIEOS pipeline. The trigger is:
 | Review Point | Kit | Artifact Reviewed | Required Lenses | Optional Lenses |
 |---|---|---|---|---|
 | Concept Review | PIK | DPRD | business-value, cost, compliance | security, reliability |
-| Architecture Review | EEK | SAD | security, reliability, resilience, performance, cost, operability, maintainability | compliance, devex, accessibility, observability |
-| Technical Design Review | EEK | TDD | security, reliability, performance, maintainability, devex | cost, compliance, accessibility, observability, resilience |
+| Architecture Review | EEK | SAD | security, reliability, resilience, performance, cost, operability, maintainability | compliance, devex, accessibility, observability, adversarial |
+| Technical Design Review | EEK | TDD | security, reliability, performance, maintainability, devex | cost, compliance, accessibility, observability, resilience, adversarial |
 | Implementation Readiness | EEK | WDD | cost, operability, business-value | maintainability |
-| Code Review | EEK | ORD | security, performance, reliability, maintainability, devex | operability, accessibility, observability |
-| Integration Review | QAK | QGR | reliability, security, performance | operability, resilience |
-| Operational Readiness | REK | RP | operability, observability, reliability, security, cost | compliance, accessibility, resilience |
+| Code Review | EEK | ORD | security, performance, reliability, maintainability, devex | operability, accessibility, observability, adversarial |
+| Integration Review | QAK | QGR | reliability, security, performance | operability, resilience, adversarial |
+| Operational Readiness | REK | RP | operability, observability, reliability, security, cost | compliance, accessibility, resilience, adversarial |
+
+The adversarial lens is recommended when the artifact has high downstream impact, contains multiple untested assumptions, or operates in a high-risk domain. It is the only lens with a minimum findings requirement — see `docs/tools/review-adversarial-spec.md` for details.
 | Post-Deployment Review | RRK | RHR | reliability, observability, performance, cost, operability | security, resilience |
 | Incident Review | ODK | PMR | security, reliability, resilience, operability | performance, maintainability, observability |
 

@@ -43,6 +43,10 @@ Each lens has four files: spec, template, prompt, validator.
 | Compliance | TOOL-REVIEW-COMPLIANCE | `review-compliance-{spec,template,prompt,validator}.md` |
 | DevEx | TOOL-REVIEW-DEVEX | `review-devex-{spec,template,prompt,validator}.md` |
 | Business Value | TOOL-REVIEW-BUSINESS-VALUE | `review-business-value-{spec,template,prompt,validator}.md` |
+| Accessibility | TOOL-REVIEW-ACCESSIBILITY | `review-accessibility-{spec,template,prompt,validator}.md` |
+| Observability | TOOL-REVIEW-OBSERVABILITY | `review-observability-{spec,template,prompt,validator}.md` |
+| Resilience | TOOL-REVIEW-RESILIENCE | `review-resilience-{spec,template,prompt,validator}.md` |
+| Adversarial | TOOL-REVIEW-ADVERSARIAL | `review-adversarial-{spec,template,prompt,validator}.md` |
 
 ---
 
@@ -50,7 +54,7 @@ Each lens has four files: spec, template, prompt, validator.
 
 | File | Purpose |
 |------|---------|
-| `principles/peer-review-principles.md` | Organizational peer review policy (6 principles) |
+| `principles/peer-review-principles.md` | Organizational peer review policy (7 principles) |
 
 ---
 

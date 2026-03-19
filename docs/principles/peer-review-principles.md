@@ -63,3 +63,13 @@ Lenses evaluate what exists in the artifact. They do not suggest new features, n
 **Rationale:** Peer review is not design. If a lens starts designing solutions, it blurs the boundary between review and generation. The artifact owner retains design authority. Lenses provide observations and recommendations, not blueprints.
 
 **Enforcement:** Lens specs require the artifact_scoped hard gate — findings must reference the reviewed artifact. Lens prompts explicitly instruct: do not suggest new scope, do not rewrite the artifact.
+
+---
+
+## Principle 7: Adversarial Depth
+
+Confirmation bias is the default failure mode of review. The adversarial lens counters this by requiring findings as the baseline expectation, not the exception. Zero findings is a signal that demands justification, not a sign of quality.
+
+**Rationale:** Domain-specific lenses naturally focus on what they know best and may validate an artifact as sound within their domain. The adversarial lens operates across domains with a skeptical posture, probing assumptions, failure cascades, and boundary conditions that domain lenses may accept implicitly. Without an adversarial perspective, review can become a rubber stamp.
+
+**Enforcement:** The adversarial lens spec includes a `minimum_findings` hard gate requiring at least 3 findings. Zero-finding outputs require detailed per-category justification and are flagged for human review regardless of justification quality.
