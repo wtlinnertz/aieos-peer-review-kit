@@ -1,6 +1,6 @@
 # How to Use This Kit with AI
 
-This guide explains how to set up AI sessions for each step in the Peer Review Kit workflow. Follow the session setup instructions precisely — incorrect session setup is the most common cause of poor review quality.
+This guide explains how to set up AI sessions for each step in the Peer Review Kit workflow. Follow the session setup instructions precisely. Incorrect session setup is the most common cause of poor review quality.
 
 ---
 
@@ -8,13 +8,12 @@ This guide explains how to set up AI sessions for each step in the Peer Review K
 
 **One lens per session.** Do not execute multiple lenses in the same session. Lens independence requires isolation.
 
-**Separate generation and validation.** Always validate in a new session. Never ask the AI that generated a lens output or PRR to validate it — this produces self-validation bias.
+**Separate generation and validation.** Always validate in a new session. Never ask the AI that generated a lens output or PRR to validate it. This produces self-validation bias.
 
 **Include full documents.** Do not summarize the artifact under review. Provide the complete document.
 
 **Do not share lens outputs between lens sessions.** Cross-lens analysis happens only during PRR aggregation.
 
----
 
 ## Lens Execution Sessions
 
@@ -58,7 +57,6 @@ Output JSON using the format defined in
 docs/tools/review-{lens-name}-validator.md."
 ```
 
----
 
 ## PRR Generation Session
 
@@ -102,12 +100,11 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/prr-validator.md."
 ```
 
----
 
 ## Troubleshooting
 
 **Lens produces no findings**
-This is valid — it means the lens found nothing concerning in its domain. The lens output should explicitly state "no findings" with a brief justification. An empty findings table without explanation fails the evidence_grounded gate.
+This is valid. It means the lens found nothing concerning in its domain. the lens output should explicitly state "no findings" with a brief justification. an empty findings table without explanation fails the evidence_grounded gate.
 
 **Lens produces findings outside its domain**
 Re-execute the lens with a clearer prompt emphasizing its domain boundaries. A security lens producing performance findings indicates the session context was contaminated or the prompt was not followed.

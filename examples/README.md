@@ -4,9 +4,9 @@ This directory contains worked examples demonstrating the Peer Review Kit in act
 
 ## Available Examples
 
-### 01 — Architecture Review PRR
+### 01: Architecture Review PRR
 
-`01-prr-architecture-review.md` — A complete Peer Review Record for an Architecture Review of a payment service SAD. Demonstrates:
+`01-prr-architecture-review.md`: A complete Peer Review Record for an Architecture Review of a payment service SAD. It demonstrates:
 
 - Execution of 6 required lenses (security, reliability, performance, cost, operability, maintainability) plus 1 optional lens (devex)
 - Realistic findings across multiple lenses
