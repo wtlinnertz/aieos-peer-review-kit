@@ -13,6 +13,8 @@ Artifacts in the AIEOS pipeline pass through their own validators, but validator
 - **Proportional depth** — Not every lens applies at every review point; the review point determines which lenses are required and which are optional
 - **Actionable findings** — Every finding includes severity, location in the artifact, and a concrete recommendation
 
+> **Adversarial lens — unique behavior:** The adversarial lens has a minimum findings requirement. A review that surfaces zero adversarial findings FAILS. This is intentional: every system has an adversarial surface; a reviewer who finds nothing has not looked hard enough. The minimum count is defined in the adversarial-lens spec. This is the only lens where finding nothing is a failure condition.
+
 ## Artifact type
 
 | Artifact | Purpose |
