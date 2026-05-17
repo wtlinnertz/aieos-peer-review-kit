@@ -68,7 +68,7 @@ CLAUDE.md              # AI operating instructions
 | Layer | Kit | Category |
 |-------|-----|----------|
 | 2. Product Intelligence | `aieos-product-intelligence-kit` | Pipeline |
-| 4. Engineering Execution | `aieos-engineering-execution-kit` | Pipeline |
+| 4. Engineering Execution | `aieos-engineering-execution` | Pipeline |
 | 5. Release & Exposure | `aieos-release-exposure-kit` | Pipeline |
 | 6. Reliability & Resilience | `aieos-reliability-resilience-kit` | Pipeline |
 | 8. Operational Diagnostics | `aieos-operational-diagnostics-kit` | Operational |
