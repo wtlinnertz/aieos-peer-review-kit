@@ -37,6 +37,8 @@ PRK operates at defined review points across the AIEOS pipeline. The trigger is:
 
 ### Review Point Table
 
+> Authoritative lens assignments are in CLAUDE.md. This table is a summary — if any discrepancy exists, CLAUDE.md governs.
+
 | Review Point | Kit | Artifact Reviewed | Required Lenses | Optional Lenses |
 |---|---|---|---|---|
 | Concept Review | PIK | DPRD | business-value, cost, compliance | security, reliability |

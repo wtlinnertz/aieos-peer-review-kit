@@ -17,10 +17,10 @@
 
 | Review Point | Required Lenses | Optional Lenses |
 |---|---|---|
-| Architecture Review | security, reliability, performance, cost, operability, maintainability | compliance, devex |
-| Technical Design Review | security, reliability, performance, maintainability, devex | cost, compliance |
+| Architecture Review | security, reliability, resilience, performance, cost, operability, maintainability | compliance, devex, accessibility, observability, adversarial |
+| Technical Design Review | security, reliability, performance, maintainability, devex | cost, compliance, accessibility, observability, resilience, adversarial |
 | Implementation Readiness | cost, operability, business-value | maintainability |
-| Code Review | security, performance, reliability, maintainability, devex | operability |
+| Code Review | security, performance, reliability, maintainability, devex | operability, accessibility, observability, adversarial |
 
 **Useful context documents:**
 
@@ -36,7 +36,7 @@
 **What changes at this boundary:**
 
 - You shift from engineering execution to multi-perspective review. The focus moves from "does this artifact satisfy its spec?" (EEK validator) to "does this artifact hold up under scrutiny from security, reliability, performance, and other perspectives?"
-- Architecture Review (SAD) is the most lens-intensive review point — 6 required lenses. This reflects the high downstream impact of architectural decisions.
+- Architecture Review (SAD) is the most lens-intensive review point — 7 required lenses. This reflects the high downstream impact of architectural decisions.
 - Code Review (ORD) focuses on implementation quality — security, performance, reliability, maintainability, and developer experience are all required.
 - Implementation Readiness (WDD) is a lighter review focused on cost, operability, and business value — confirming the work decomposition is practical and aligned.
 
