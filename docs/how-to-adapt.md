@@ -40,7 +40,6 @@ PRK can be adopted incrementally:
 - **Selective adoption**: PRR required only at high-risk review points (e.g., Architecture Review, Code Review, Operational Readiness)
 - **Advisory adoption**: PRR produced but not required for freeze; findings are advisory
 
-
 ## What Not to Adapt
 
 ### Specs
@@ -61,7 +60,6 @@ Validators evaluate against specs. If a validator is producing unexpected result
 
 Do not modify the process to share lens outputs between lens execution sessions. Lens independence is a core principle. Cross-lens analysis occurs only during PRR aggregation.
 
-
 ## Adding Lens Tools
 
 If your organization needs additional review lenses, follow the four-file system:
@@ -72,7 +70,6 @@ If your organization needs additional review lenses, follow the four-file system
 4. Write the prompt. Invocation behavior, references spec and template
 
 Register the new lens in the review point table in the playbook. Update the PRR spec if the new lens has special aggregation requirements.
-
 
 ## Tool Bindings
 
@@ -85,7 +82,6 @@ docs/bindings/
 ```
 
 Bindings are not governed artifacts. They have no spec, validator, or prompt. Update them when your tooling changes without touching the governed files.
-
 
 ## First-Time Setup Checklist
 
