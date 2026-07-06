@@ -14,7 +14,6 @@ This guide explains how to set up AI sessions for each step in the Peer Review K
 
 **Do not share lens outputs between lens sessions.** Cross-lens analysis happens only during PRR aggregation.
 
-
 ## Lens Execution Sessions
 
 Execute one session per lens. All lens sessions for a review point can run in parallel.
@@ -57,7 +56,6 @@ Output JSON using the format defined in
 docs/tools/review-{lens-name}-validator.md."
 ```
 
-
 ## PRR Generation Session
 
 After all lens outputs are validated, aggregate into a PRR.
@@ -99,7 +97,6 @@ Use only the spec as the source of truth for pass/fail criteria.
 Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/prr-validator.md."
 ```
-
 
 ## Troubleshooting
 
