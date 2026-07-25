@@ -6,14 +6,15 @@
 
 | Field | Value |
 |-------|-------|
-| PRR ID | PRR-{PROJECT}-{NNN} |
+| Artifact ID | PRR-{PROJECT}-{NNN} |
+| Owner | {owner} |
 | Date | {YYYY-MM-DD} |
 | Reviewed Artifact ID | {TYPE}-{PROJECT}-{NNN} |
 | Reviewed Artifact Type | {artifact type, e.g., SAD, TDD, DPRD} |
 | Reviewed Artifact Status | {Validated / Frozen} |
 | Review Point | {review point name from review point table} |
 | Executed Lenses | {comma-separated list of lens names} |
-| Status | Draft / Validated / Freeze Pending / Frozen |
+| Status | DRAFT |
 | Governance Model Version | 1.2 |
 | Prompt Version | {prompt version} |
 | Spec Version | {spec version} |
